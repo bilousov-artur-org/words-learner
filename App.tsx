@@ -1,6 +1,7 @@
 import React from 'react';
 
-import Login from "./conponents/LoginScreen";
+import LoginScreen from "./conponents/LoginScreen";
+import RecoverScreen from "./conponents/RecoverScreen";
 import {View} from "react-native";
 
 import styles from "./Global.style";
@@ -10,7 +11,8 @@ export default function App() {
 
     return (
         <View style={styles.container}>
-            <Login/>
+            {/*<LoginScreen/>*/}
+            <RecoverScreen/>
         </View>
     );
 };

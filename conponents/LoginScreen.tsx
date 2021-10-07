@@ -13,18 +13,18 @@ import book from '../assets/abby.png';
 import styles from '../Login.style';
 import globalStyles from '../Global.style';
 
-export default function Login() {
+export default function LoginScreen() {
     const [text, onChangeText] = useState("");
     const [password, onChangePassword] = useState('');
 
     return (
         <View style={globalStyles.container}>
             <Image source={book} style={{width: 100, height: 60, marginBottom: 40}}/>
-            <Text style={[styles.subject]}>ABBY Words Learner</Text>
+            <Text style={[globalStyles.subject]}>ABBY Words Learner</Text>
 
             <SafeAreaView>
                 <TextInput
-                    style={styles.input}
+                    style={globalStyles.input}
                     onChangeText={onChangeText}
                     placeholder="E-Mail"
                     keyboardType="email-address"
@@ -32,7 +32,7 @@ export default function Login() {
                 />
 
                 <TextInput
-                    style={styles.input}
+                    style={globalStyles.input}
                     onChangeText={onChangePassword}
                     placeholder="Password"
                     secureTextEntry={true}
@@ -40,23 +40,23 @@ export default function Login() {
                 />
 
                 <View style={[styles.loginBtnContainer]}>
-                    <TouchableOpacity style={styles.loginBtnWrapper} onPress={() => {
-                        console.log('Stub Log In')
+                    <TouchableOpacity style={globalStyles.loginBtnWrapper} onPress={() => {
+                        console.log('Stub Log In');
                     }}>
-                        <Text style={[styles.loginBtnText, styles.primaryBtn]}>Log In</Text>
+                        <Text style={[globalStyles.loginBtnText, globalStyles.primaryBtn]}>Log In</Text>
                     </TouchableOpacity>
 
-                    <TouchableOpacity style={styles.loginBtnWrapper} onPress={() => {
-                        console.log('Stub Sign Up')
+                    <TouchableOpacity style={globalStyles.loginBtnWrapper} onPress={() => {
+                        console.log('Stub Sign Up');
                     }}>
-                        <Text style={styles.loginBtnText}>Sign Up</Text>
+                        <Text style={globalStyles.loginBtnText}>Sign Up</Text>
                     </TouchableOpacity>
                 </View>
 
                 <Pressable onPress={() => {
-                    console.log('Stub Reset Password')
+                    console.log('Stub Recover Password');
                 }}>
-                    <Text style={styles.forgot}>Forgot Password?</Text>
+                    <Text style={styles.recover}>Forgot Password?</Text>
                 </Pressable>
 
             </SafeAreaView>
