@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import React, {useState} from 'react';
 import {
     SafeAreaView,
@@ -12,6 +13,7 @@ import globalStyles from '../Global.style';
 export default function RecoverScreen() {
     const [text, onChangeText] = useState("");
     const [password, onChangePassword] = useState('');
+    const navigation = useNavigation();
 
     return (
         <View style={globalStyles.container}>

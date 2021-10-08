@@ -13,7 +13,7 @@ import book from '../assets/abby.png';
 import styles from '../Login.style';
 import globalStyles from '../Global.style';
 
-export default function LoginScreen() {
+export default function LoginScreen({navigation}:any) {
     const [text, onChangeText] = useState("");
     const [password, onChangePassword] = useState('');
 
@@ -47,14 +47,14 @@ export default function LoginScreen() {
                     </TouchableOpacity>
 
                     <TouchableOpacity style={globalStyles.loginBtnWrapper} onPress={() => {
-                        console.log('Stub Sign Up');
+                        navigation.navigate('ProfileScreen');
                     }}>
                         <Text style={globalStyles.loginBtnText}>Sign Up</Text>
                     </TouchableOpacity>
                 </View>
 
                 <Pressable onPress={() => {
-                    console.log('Stub Recover Password');
+                    navigation.navigate('RecoverScreen');
                 }}>
                     <Text style={styles.recover}>Forgot Password?</Text>
                 </Pressable>

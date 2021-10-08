@@ -7,16 +7,18 @@ import ProfileScreen from "./conponents/ProfileScreen";
 import {NavigationContainer} from "@react-navigation/native";
 import {createNativeStackNavigator} from "@react-navigation/native-stack";
 
-const MainStack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator();
+
 
 export default function App() {
 
     return (
-        // <LoginScreen/>
         <NavigationContainer>
-            <MainStack.Screen name="LoginScreen" component={LoginScreen}/>
-            <MainStack.Screen name="RecoverScreen" component={RecoverScreen}/>
-            <MainStack.Screen name="ProfileScreen" component={ProfileScreen}/>
+            <Stack.Navigator>
+                <Stack.Screen name="LoginScreen" component={LoginScreen}/>
+                <Stack.Screen name="RecoverScreen" component={RecoverScreen}/>
+                <Stack.Screen name="ProfileScreen" component={ProfileScreen}/>
+            </Stack.Navigator>
         </NavigationContainer>
     );
 };
