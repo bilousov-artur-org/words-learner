@@ -1,6 +1,6 @@
 import {StyleSheet} from "react-native";
 
-import {Color} from './Global.style';
+import {CustomColor} from './Global.style';
 
 export default StyleSheet.create({
     loginBtnContainer: {
@@ -10,7 +10,7 @@ export default StyleSheet.create({
     },
     recover: {
         marginTop: 40,
-        color: Color.default,
+        color: CustomColor.default,
         alignSelf: 'center',
     },
 });

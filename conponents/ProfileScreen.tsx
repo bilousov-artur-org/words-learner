@@ -5,15 +5,19 @@ import {
     Text,
     TextInput,
     TouchableOpacity,
-    View
+    View,
 } from 'react-native';
+
+import LoginScreen from "./LoginScreen";
 
 import globalStyles from '../Global.style';
 
-export default function RecoverScreen() {
-    const [text, onChangeText] = useState("");
+export default function RecoverScreen({navigation}: any) {
+    const [name, onChangeName] = useState("");
+    const [secondName, onChangeSecondName] = useState("");
+    const [email, onChangeEmail] = useState("");
     const [password, onChangePassword] = useState('');
-    const navigation = useNavigation();
+    // const navigation = useNavigation();
 
     return (
         <View style={globalStyles.container}>
@@ -22,26 +26,26 @@ export default function RecoverScreen() {
             <SafeAreaView>
                 <TextInput
                     style={globalStyles.input}
-                    onChangeText={onChangeText}
+                    onChangeText={onChangeName}
                     placeholder="Name"
                     keyboardType="default"
-                    value={text}
+                    value={name}
                 />
 
                 <TextInput
                     style={globalStyles.input}
-                    onChangeText={onChangeText}
+                    onChangeText={onChangeSecondName}
                     placeholder="Second Name"
                     keyboardType="default"
-                    value={text}
+                    value={secondName}
                 />
 
                 <TextInput
                     style={globalStyles.input}
-                    onChangeText={onChangeText}
+                    onChangeText={onChangeEmail}
                     placeholder="E-Mail"
                     keyboardType="email-address"
-                    value={text}
+                    value={email}
                 />
 
                 <TextInput
@@ -54,6 +58,7 @@ export default function RecoverScreen() {
 
                 <TouchableOpacity style={[globalStyles.loginBtnWrapper, {marginTop: 50}]} onPress={() => {
                     console.log('Stub Save');
+                    navigation.push('LoginScreen');
                 }}>
                     <Text style={[globalStyles.loginBtnText, globalStyles.primaryBtn]}>Save</Text>
                 </TouchableOpacity>

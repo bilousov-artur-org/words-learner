@@ -1,6 +1,6 @@
 import {StyleSheet} from "react-native";
 
-export const Color = {
+export const CustomColor = {
     default: '#C60305',
     white: '#fff',
     defaultBorder: 'rgba(198,3,5,0.5)',
@@ -10,18 +10,18 @@ export const Color = {
 export default StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: Color.white,
-        // alignItems: 'center',
-        // justifyContent: 'center',
+        backgroundColor: CustomColor.white,
+        alignItems: 'center',
+        justifyContent: 'center',
     },
     subject: {
-        color: Color.defaultText,
+        color: CustomColor.defaultText,
         marginBottom: 50
     },
     input: {
         width: 200,
         height: 30,
-        borderBottomColor: Color.defaultBorder,
+        borderBottomColor: CustomColor.defaultBorder,
         borderBottomWidth: 1,
         marginBottom: 20
     },
@@ -29,8 +29,8 @@ export default StyleSheet.create({
         alignSelf: 'center',
     },
     primaryBtn: {
-        color: Color.white,
-        backgroundColor: Color.default,
+        color: CustomColor.white,
+        backgroundColor: CustomColor.default,
         borderRadius: 8,
         overflow: 'hidden'
     },
@@ -39,8 +39,8 @@ export default StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         fontSize: 18,
-        color: Color.default,
-        borderColor: Color.default,
+        color: CustomColor.default,
+        borderColor: CustomColor.default,
         borderWidth: 1,
         borderRadius: 8,
     },

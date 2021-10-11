@@ -5,6 +5,8 @@ import {
     Text, View,
 } from 'react-native';
 
+import styles from '../Chat.style';
+
 const baseUrl = 'https://randomuser.me/api/?seed=lol&inc=picture,name';
 
 const getUsers = async(
@@ -58,28 +60,3 @@ export default function LoginScreen() {
         />
     );
 };
-
-const styles = StyleSheet.create({
-    container:{
-        flex: 1,
-        alignContent: 'center',
-    },
-    itemContainer: {
-        width: '100%',
-        height: 50,
-        borderBottomWidth: 1,
-        borderColor: 'black',
-        flexDirection: 'row',
-        paddingHorizontal: 10,
-
-        alignItems: 'center',
-    },
-    avatar: {
-        width: 40,
-        height: 40,
-        borderRadius: 20,
-    },
-    name: {
-        marginLeft: 25,
-    },
-});

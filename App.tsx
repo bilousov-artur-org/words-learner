@@ -16,16 +16,13 @@ const Stack = createNativeStackNavigator();
 export default function App() {
 
     return (
-        /*<NavigationContainer>
+        <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen name="LoginScreen" component={LoginScreen}/>
                 <Stack.Screen name="RecoverScreen" component={RecoverScreen}/>
                 <Stack.Screen name="ProfileScreen" component={ProfileScreen}/>
+                <Stack.Screen name="ChatScreen" component={ChatScreen}/>
             </Stack.Navigator>
-        </NavigationContainer>*/
-        <SafeAreaView style={styles.container}>
-            <ChatScreen />
-        </SafeAreaView>
-
+        </NavigationContainer>
     );
 };

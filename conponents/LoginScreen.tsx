@@ -41,7 +41,7 @@ export default function LoginScreen({navigation}:any) {
 
                 <View style={[styles.loginBtnContainer]}>
                     <TouchableOpacity style={globalStyles.loginBtnWrapper} onPress={() => {
-                        console.log('Stub Log In');
+                        navigation.navigate('ChatScreen');
                     }}>
                         <Text style={[globalStyles.loginBtnText, globalStyles.primaryBtn]}>Log In</Text>
                     </TouchableOpacity>
