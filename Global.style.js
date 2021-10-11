@@ -11,8 +11,8 @@ export default StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: Color.white,
-        alignItems: 'center',
-        justifyContent: 'center',
+        // alignItems: 'center',
+        // justifyContent: 'center',
     },
     subject: {
         color: Color.defaultText,

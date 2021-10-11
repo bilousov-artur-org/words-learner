@@ -1,9 +1,10 @@
 import React from 'react';
 
+import ChatScreen from "./conponents/ChatScreen";
 import LoginScreen from "./conponents/LoginScreen";
 import RecoverScreen from "./conponents/RecoverScreen";
 import ProfileScreen from "./conponents/ProfileScreen";
-import {View} from "react-native";
+import { SafeAreaView} from "react-native";
 
 import styles from "./Global.style";
 
@@ -11,10 +12,13 @@ import styles from "./Global.style";
 export default function App() {
 
     return (
-        <View style={styles.container}>
-            {/*<LoginScreen/>*/}
-            {/*<RecoverScreen/>*/}
-            <ProfileScreen/>
-        </View>
+        <SafeAreaView style={styles.container}>
+            <ChatScreen />
+        </SafeAreaView>
+        /*<View style={styles.container}>
+            {/!*<LoginScreen/>*!/}
+            {/!*<RecoverScreen/>*!/}
+            {/!*<ProfileScreen/>*!/}
+        </View>*/
     );
 };
